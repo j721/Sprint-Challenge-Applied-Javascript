@@ -22,13 +22,21 @@
 
 //start of code here
 
-// axios.get("https://lambda-times-backend.herokuapp.com/articles")
-// .then(response=>{
-//     console.log("article data was returned", response.data.articles);
-// })
-// .catch(error=>{
-//     console.log('article data failed to return',error);
-// });
+const cardContainer = document.querySelector('.cards-container');
+
+axios.get("https://lambda-times-backend.herokuapp.com/articles")
+.then(response=>{
+    console.log("article data was returned", response.data.articles);
+    //looping though an object
+    Object.values(response.data.articles).forEach(item=>{
+        item.forEach(element=>{
+                cardContainer.append(createCard(element))
+        })
+    });
+})
+.catch(error=>{
+    console.log('article data failed to return',error);
+});
 
 
 function createCard(data){
