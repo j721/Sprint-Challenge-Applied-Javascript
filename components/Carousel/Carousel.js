@@ -32,10 +32,10 @@ function createCarousel(){
   carousel.classList.add('carousel');
   leftButton.classList.add('left-button');
   rightButton.classList.add('right-button');
-  img1.classList.add('img'); 
-  img2.classList.add('img'); 
-  img3.classList.add('img'); 
-  img4.classList.add('img');
+  // img1.classList.add('img'); 
+  // img2.classList.add('img'); 
+  // img3.classList.add('img'); 
+  // img4.classList.add('img');
 
   //set content
     img1.src= "./assets/carousel/mountains.jpeg";
@@ -44,11 +44,27 @@ function createCarousel(){
     img4.src= "./assets/carousel/turntable.jpeg";
 
   //append elements
-    carousel.append(leftButton, img1, img2, img3, img4, rightButton);
+    carousel.append(leftButton);
+    carousel.append(img1);
+    carousel.append(img2);
+    carousel.append(img3);
+    carousel.append(img4);
+
+    //text content
+    leftButton.textContent ="<";
+    rightButton.textContent=">";
+
+    //styles
+    img1.style.display= "block"; 
 
     return carousel; 
 
 }
+
+// const imageArray=[img1, img2, img3, img4];
+// imageArray.forEach(element=>{
+
+// })
 
 const carouselContainer = document.querySelector('.carousel-container');
 carouselContainer.append(createCarousel());
