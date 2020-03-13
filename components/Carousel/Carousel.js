@@ -55,16 +55,41 @@ function createCarousel(){
     rightButton.textContent=">";
 
     //styles
-    img1.style.display= "block"; 
+    img1.style.display= "block";
+    // img2.style.display="block"; 
+    // img3.style.display= "block";
+    // img4.style.display= "block";
 
-    return carousel; 
 
+  const imageArray=[img1, img2, img3, img4];
+
+  // let index === 0; 
+
+  const newImage = (picture, index)=>{
+    if (index===0){
+      picture.style.display ="block";
+    }
+    else{
+      picture.style.display ="none";
+    }
+  }
+
+ leftButton.addEventListener('click', event=>{
+    index+=1
+    imageArray.forEach(newImage);
+ })
+
+
+ return carousel; 
 }
+
 
 // const imageArray=[img1, img2, img3, img4];
 // imageArray.forEach(element=>{
 
 // })
+
+
 
 const carouselContainer = document.querySelector('.carousel-container');
 carouselContainer.append(createCarousel());
