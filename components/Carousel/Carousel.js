@@ -32,16 +32,19 @@ function createCarousel(){
   carousel.classList.add('carousel');
   leftButton.classList.add('left-button');
   rightButton.classList.add('right-button');
-  img1, img2, img3, img4.classList.add('img');
+  img1.classList.add('img'); 
+  img2.classList.add('img'); 
+  img3.classList.add('img'); 
+  img4.classList.add('img');
 
   //set content
-    img1.setAttribute("src", "./assets/carousel/mountains.jpeg");
-    img2.setAttribute("src", "./assets/carousel/computer.jpeg");
-    img3.setAttribute("src", "./assets/carousel/trees.jpeg");
-    img4.setAttribute("src", "./assets/carousel/turntable.jpeg");
+    img1.src= "./assets/carousel/mountains.jpeg";
+    img2.src= "./assets/carousel/computer.jpeg";
+    img3.src= "./assets/carousel/trees.jpeg";
+    img4.src= "./assets/carousel/turntable.jpeg";
 
   //append elements
-    carousel.append(leftButton, img1, img2,img3,img4, rightButton);
+    carousel.append(leftButton, img1, img2, img3, img4, rightButton);
 
     return carousel; 
 
