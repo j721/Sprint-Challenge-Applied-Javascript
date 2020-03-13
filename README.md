@@ -51,8 +51,8 @@ Edit this document to include your answers after each question. Make sure to lea
 
 5. What is a component?
 
-        A component is a reusable piece of code that can be used to create certain elements that share functionality, and styling. 
-        Components help to keep our code DRY. A component is made up of several parts that can include HTML,CSS, and Javascript
+     A component is a reusable piece of code that can be used to create certain elements that share functionality, and styling. 
+     Components help to keep our code DRY. A component is made up of several parts that can include HTML,CSS, and Javascript
 
 ### Git Set up
 
