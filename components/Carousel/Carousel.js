@@ -35,10 +35,10 @@ function createCarousel(){
   img1, img2, img3, img4.classList.add('img');
 
   //set content
-    img1.src = "./assets/carousel/mountains.jpeg";
-    img2.src= "./assets/carousel/computer.jpeg";
-    img3.src= "./assets/carousel/trees.jpeg";
-    img4.src= "./assets/carousel/turntable.jpeg";
+    img1.setAttribute("src", "./assets/carousel/mountains.jpeg");
+    img2.setAttribute("src", "./assets/carousel/computer.jpeg");
+    img3.setAttribute("src", "./assets/carousel/trees.jpeg");
+    img4.setAttribute("src", "./assets/carousel/turntable.jpeg");
 
   //append elements
     carousel.append(leftButton, img1, img2,img3,img4, rightButton);
@@ -48,4 +48,6 @@ function createCarousel(){
 }
 
 const carouselContainer = document.querySelector('.carousel-container');
-carouselContainer.append(createCard());
+carouselContainer.append(createCarousel());
+
+console.log(carouselContainer);
