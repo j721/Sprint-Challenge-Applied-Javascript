@@ -49,6 +49,7 @@ function createCarousel(){
     carousel.append(img2);
     carousel.append(img3);
     carousel.append(img4);
+    carousel.append(rightButton);
 
     //text content
     leftButton.textContent ="<";
@@ -79,6 +80,9 @@ function createCarousel(){
     imageArray.forEach(newImage);
  })
 
+  rightButton.addEventListener('click', event=>{
+    imageArray.forEach(newImage);
+  })
 
  return carousel; 
 }
