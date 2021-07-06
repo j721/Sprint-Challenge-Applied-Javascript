@@ -17,3 +17,85 @@
     <div class="right-button"> > </div>
   </div>
 */
+
+function createCarousel(){
+  //create elements
+  const carousel = document.createElement('div');
+  const leftButton = document.createElement('div');
+  const img1 = document.createElement('img');
+  const img2 = document.createElement('img');
+  const img3 = document.createElement('img');
+  const img4 = document.createElement('img');
+  const rightButton = document.createElement('div');
+
+  //add classes
+  carousel.classList.add('carousel');
+  leftButton.classList.add('left-button');
+  rightButton.classList.add('right-button');
+  // img1.classList.add('img'); 
+  // img2.classList.add('img'); 
+  // img3.classList.add('img'); 
+  // img4.classList.add('img');
+
+  //set content
+    img1.src= "./assets/carousel/mountains.jpeg";
+    img2.src= "./assets/carousel/computer.jpeg";
+    img3.src= "./assets/carousel/trees.jpeg";
+    img4.src= "./assets/carousel/turntable.jpeg";
+
+  //append elements
+    carousel.append(leftButton);
+    carousel.append(img1);
+    carousel.append(img2);
+    carousel.append(img3);
+    carousel.append(img4);
+    carousel.append(rightButton);
+
+    //text content
+    leftButton.textContent ="<";
+    rightButton.textContent=">";
+
+    //styles
+    img1.style.display= "block";
+    // img2.style.display="block"; 
+    // img3.style.display= "block";
+    // img4.style.display= "block";
+
+
+  const imageArray=[img1, img2, img3, img4];
+
+  // let index === 0; 
+
+  const newImage = (picture, index)=>{
+    if (index===0){
+      picture.style.display ="block";
+    }
+    else{
+      picture.style.display ="none";
+    }
+  }
+
+ leftButton.addEventListener('click', event=>{
+    index+=1
+    imageArray.forEach(newImage);
+ })
+
+  rightButton.addEventListener('click', event=>{
+    imageArray.forEach(newImage);
+  })
+
+ return carousel; 
+}
+
+
+// const imageArray=[img1, img2, img3, img4];
+// imageArray.forEach(element=>{
+
+// })
+
+
+
+const carouselContainer = document.querySelector('.carousel-container');
+carouselContainer.append(createCarousel());
+
+console.log(carouselContainer);
